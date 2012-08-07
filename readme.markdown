@@ -1,0 +1,3 @@
+# jQuery-Organic-Tabs ([Article](http://css-tricks.com/organic-tabs/) / [Demo](http://css-tricks.com/examples/OrganicTabs/))
+
+Have you ever seen a tabbed content area in a sidebar that was a little "jerky"? The jerkiness can be caused by a bunch of things, like the content in the tabbed areas are of different heights, or maybe the way the switch happens the current one is hidden for a brief second before the new one shows up and the content below it jumps up and back down quickly. For lack of a better term, I'm calling tabs that behave more smoothly organic tabs.
