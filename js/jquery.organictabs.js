@@ -2,13 +2,13 @@
 /*global define, jQuery */
 
 (function (factory) {
-	if (typeof define === 'function' && define.amd) {
-		// AMD. Register as an anonymous module.
-		define(['jquery'], factory);
-	} else {
-		// Browser globals
-		factory(jQuery);
-	}
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
 }(function ($) {
 
     $.organicTabs = function(el, options) {
