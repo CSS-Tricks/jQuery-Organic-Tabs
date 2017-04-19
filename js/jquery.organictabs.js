@@ -1,4 +1,15 @@
-(function($) {
+/*jshint browser:true */
+/*global define, jQuery, window */
+
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
 
     $.organicTabs = function(el, options) {
     
@@ -70,17 +81,17 @@
         base.init();
 
         // check for window.state, if exists then activate
-        if(history.state && history.state.length !==0){
-            if("organictabsState" in history.state){ // check for the organictabsState key
                 
+        if(window.history.state && window.history.state.length !==0){
+            if("organictabsState" in window.history.state){ // check for the organictabsState key
                 // pull back in all of the var declarations so that they're accessible at start
                 curList = base.$el.find("a.current").attr("href").substring(1);
-                stateID = history.state.organictabsState;
+                stateID = window.history.state.organictabsState;
                 $allListWrap = base.$el.find(".list-wrap"),
                 curListHeight = $allListWrap.height();
                 $allListWrap.height(curListHeight);
 
-                if (history.state.organictabsState != curList) {
+                if (window.history.state.organictabsState != curList) {
 
                                             
                     // Fade out current list
@@ -121,4 +132,4 @@
         });
     };
 
-})(jQuery);
+}));
