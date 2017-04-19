@@ -1,5 +1,5 @@
 /*jshint browser:true */
-/*global define, jQuery */
+/*global define, jQuery, window */
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
